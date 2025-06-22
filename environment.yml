@@ -1,0 +1,19 @@
+name: KNU_2025_summer_school
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10.9
+  - numpy
+  - xarray
+  - scipy
+  - pandas
+  - matplotlib
+  - cartopy
+  - seaborn
+  - sympy
+  - ffmpeg
+  - jupyter
+  - netcdf4
+  - nc-time-axis
+  - jupyter-book
+  - tqdm

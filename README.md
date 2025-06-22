@@ -1,1 +1,1 @@
-# KNU_2025_summer_school_LSM
+# KNU 2025 sever weather summer school: Land surface model
