@@ -5,6 +5,15 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -12,6 +21,8 @@ jobs:
     steps:
     - name: Checkout repo
       uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
 
     - name: Set up Python
       uses: actions/setup-python@v5
@@ -20,21 +31,21 @@ jobs:
 
     - name: Install dependencies
       run: |
-        pip install -U jupyter-book ghp-import
+        pip install -U jupyter-book
 
     - name: Build the book
       run: |
         jupyter-book build .
 
-    - name: Deploy to GitHub Pages
-      env:
-        GIT_USER: github-actions
-        GIT_EMAIL: github-actions@github.com
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        git config --global user.name "${GIT_USER}"
-        git config --global user.email "${GIT_EMAIL}"
+    - name: Setup Pages
+      uses: actions/configure-pages@v4
 
-        ghp-import -n -f -b gh-pages _build/html
-        git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }} gh-pages --force
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: '_build/html'
+
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
 
