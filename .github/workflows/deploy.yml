@@ -27,5 +27,14 @@ jobs:
         jupyter-book build .
 
     - name: Deploy to GitHub Pages
+      env:
+        GIT_USER: github-actions
+        GIT_EMAIL: github-actions@github.com
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        ghp-import -n -p -f _build/html
+        git config --global user.name "${GIT_USER}"
+        git config --global user.email "${GIT_EMAIL}"
+
+        ghp-import -n -f -b gh-pages _build/html
+        git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }} gh-pages --force
+
