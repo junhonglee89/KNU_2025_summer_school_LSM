@@ -1,0 +1,2114 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>6. Sensible heat flux at the surface (\(H\)) &#8212; KNU 2025 Sever Weather Summer school</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=6fd9dfa9" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Lecture/sensible_heat_flux';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="7. Latent heat flux at the surface (\(\lambda E\))" href="latent_heat_flux.html" />
+    <link rel="prev" title="5. Upward shortwave radiation at the surface (\(LW_u\))" href="upward_longwave_radiation.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../home.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">KNU 2025 Sever Weather Summer school</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../home.html">
+                    KNU 2025 sever weather summer school: Land surface model
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lecture</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">1. Land surface model 개요</a></li>
+<li class="toctree-l1"><a class="reference internal" href="downward_shortwave_radiation.html">2. Downward shortwave radiation at the surface (<span class="math notranslate nohighlight">\(SW_d\)</span>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="albedo.html">3. Albedo (<span class="math notranslate nohighlight">\(\alpha\)</span>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="downward_longwave_radiation.html">4. Downward longwave radiation at the surface (<span class="math notranslate nohighlight">\(LW_d\)</span>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="upward_longwave_radiation.html">5. Upward shortwave radiation at the surface (<span class="math notranslate nohighlight">\(LW_u\)</span>)</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">6. Sensible heat flux at the surface (<span class="math notranslate nohighlight">\(H\)</span>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="latent_heat_flux.html">7. Latent heat flux at the surface (<span class="math notranslate nohighlight">\(\lambda E\)</span>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ground_heat_flux.html">8. Ground heat flux at the surface (<span class="math notranslate nohighlight">\(G\)</span>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="water_budget.html">9. Water budget</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Postamble</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/junhonglee89/KNU_2025_summer_school_LSM" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Lecture/sensible_heat_flux.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Sensible heat flux at the surface (H)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aerodynamic-resistance-r-h">Aerodynamic resistance (<span class="math notranslate nohighlight">\(r_h\)</span>)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-calculate-r-h-in-lsm">How to calculate <span class="math notranslate nohighlight">\(r_h\)</span> in LSM</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-calculate-u-in-lsm">How to calculate <span class="math notranslate nohighlight">\(u_*\)</span> in LSM</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practice-6-1">Practice 6.1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#atmospheric-variables-ri-b">① atmospheric variables → <span class="math notranslate nohighlight">\(Ri_b\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ri-b-z-l">② <span class="math notranslate nohighlight">\(Ri_b\)</span> → <span class="math notranslate nohighlight">\(z/L\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#z-l-psi-m-psi-h">③ <span class="math notranslate nohighlight">\(z/L\)</span> → <span class="math notranslate nohighlight">\(\psi_m\)</span>, <span class="math notranslate nohighlight">\(\psi_h\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#psi-m-psi-h-u">④ <span class="math notranslate nohighlight">\(\psi_m\)</span>, <span class="math notranslate nohighlight">\(\psi_h\)</span> → <span class="math notranslate nohighlight">\(u_*\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#u-r-h">⑤ <span class="math notranslate nohighlight">\(u_*\)</span> → <span class="math notranslate nohighlight">\(r_h\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#r-h-h">⑥ <span class="math notranslate nohighlight">\(r_h\)</span> → <span class="math notranslate nohighlight">\(H\)</span></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practice-6-2">Practice 6.2</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="sensible-heat-flux-at-the-surface-h">
+<h1><span class="section-number">6. </span>Sensible heat flux at the surface (<span class="math notranslate nohighlight">\(H\)</span>)<a class="headerlink" href="#sensible-heat-flux-at-the-surface-h" title="Link to this heading">#</a></h1>
+<div class="math notranslate nohighlight">
+\[
+C_{soil} \frac{\partial T_{s}}{\partial t} = (1-\alpha) \cdot SW_d + LW_d - LW_u \ - \textcolor{red}{H} - \lambda E - G      \tag{1.1}
+\]</div>
+<ul class="simple">
+<li><p><strong>Definition</strong>: The rate of heat transfer per unit area by turbulence.</p></li>
+<li><p><strong>Equation</strong>:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+H = - \rho c_p K \frac{\partial T}{\partial z}      \tag{6.1}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\rho\)</span> is the air dnesity, <span class="math notranslate nohighlight">\(c_p\)</span> is the specific heat at constant pressure, and <span class="math notranslate nohighlight">\(K\)</span> is the thermal diffusivity [m<sup>2</sup>/s<sup>1</sup>].</p>
+<br>
+<br>
+<p>Eq. 6.1 can be rewritten as,</p>
+<div class="math notranslate nohighlight">
+\[
+dT = - \frac{1}{\rho c_p} \frac{H}{K} dz        \tag{6.2}
+\]</div>
+<br>
+<p>Then, integerate Eq. 6.2 from the roughness length (<span class="math notranslate nohighlight">\(z_0\)</span>) to the model lowest layer (<span class="math notranslate nohighlight">\(z_r\)</span>),</p>
+<div class="math notranslate nohighlight">
+\[
+\int_{T(z=z_0)}^{T(z=z_r)} dT = - \frac{H}{\rho c_p} \int_{z_0}^{z_r} \frac{1}{K} dz        \tag{6.3}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(T(z=z_0)\)</span> can be approximated as <span class="math notranslate nohighlight">\(T_s\)</span>, and <span class="math notranslate nohighlight">\(T(z=z_r)\)</span> can be replaced with <span class="math notranslate nohighlight">\(T_a\)</span>.</p>
+<br>
+<br>
+<p>Rearrange again,</p>
+<div class="math notranslate nohighlight">
+\[
+T_a - T_s = - \frac{H}{\rho c_p} \textcolor{red}{\int_{z_0}^{z_r} \frac{1}{K} dz}        \tag{6.4}
+\]</div>
+<br>
+<p>Here, we introduce the aerodynamic resistance <span class="math notranslate nohighlight">\(r_h\)</span> as</p>
+<div class="math notranslate nohighlight">
+\[
+r_h = \int_{z_0}^{z_r} \frac{1}{K} dz       \tag{6.5}
+\]</div>
+<br>
+<br>
+<p>Replace the term in Eq. 6.4 by Eq. 6.5, we get</p>
+<div class="math notranslate nohighlight">
+\[
+T_a - T_s = - \frac{H}{\rho c_p} \textcolor{red}{r_h}        \tag{6.6}
+\]</div>
+<br>
+<br>
+<p>Rearranging Eq. 6.6, we get the expression for <span class="math notranslate nohighlight">\(H\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+H = \frac{\rho c_p (T_s - T_a)}{r_h}        \tag{6.7}
+\]</div>
+<br>
+<br>
+<hr>
+<section id="aerodynamic-resistance-r-h">
+<h2>Aerodynamic resistance (<span class="math notranslate nohighlight">\(r_h\)</span>)<a class="headerlink" href="#aerodynamic-resistance-r-h" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(r_h\)</span> is the same concept as <strong>the electrical resistance</strong> in physics.</p></li>
+<li><p><strong>Ohm’s Law</strong>:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+I = \frac{V_{AB}}{R}    \tag{6.8}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(I\)</span> is the flow of electron, <span class="math notranslate nohighlight">\(V_{AB}\)</span>, and <span class="math notranslate nohighlight">\(R\)</span> is the electrical resistance, representing how difficult for electric current to flow.</p>
+<!-- - $R$ $\propto$ $\frac{1}{\textrm{area}}$, $\textrm{length}$
+
+<figure>
+  <img src="../../../images/sensible_heat_flux_01.png" style="width:80%">
+</figure> -->
+<ul class="simple">
+<li><p>Comparison between the electrical resistance and aerodynmaic resistance:</p></li>
+</ul>
+<figure>
+  <img src="../_static/images/sensible_heat_flux_02.png" style="width:80%">
+</figure>
+<!-- - In the model, we always assume unit area &#8594; $r_h$ $\propto$ $\textrm{length}$ -->
+<br>
+<br>
+<hr>
+<section id="how-to-calculate-r-h-in-lsm">
+<h3>How to calculate <span class="math notranslate nohighlight">\(r_h\)</span> in LSM<a class="headerlink" href="#how-to-calculate-r-h-in-lsm" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Within the surface layer (bottom 10% of planetary boundary layer), through observations and scaling analysis in neutral stability conditions, the following relationship has been found:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+K = k z u_*     \tag{6.9}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(z\)</span> is the height, <span class="math notranslate nohighlight">\(u_*\)</span> is the friction velocity (=<span class="math notranslate nohighlight">\((\overline{u'w'})^{0.5}\)</span>), <span class="math notranslate nohighlight">\(k\)</span> is the von Karman constant.</p>
+<br>
+<ul class="simple">
+<li><p>With Eq. 6.9, solve Eq. 6.5,</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+r_h = \int_{z_0}^{z_r} \frac{1}{K} dz = \int_{z_0}^{z_r} \frac{1}{kzu_*} dz = \frac{1}{ku_*} \int_{z_0}^{z_r} \frac{dz}{z}      \tag{6.10}
+\]</div>
+<br>
+<ul class="simple">
+<li><p>Finally, we get</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+r_h = \frac{1}{ku_*} \textrm{ln} \left( \frac{z_r}{z_0} \right)     \tag{6.11}
+\]</div>
+<br>
+<div class="tip admonition">
+<p class="admonition-title">Several assumptions are used,</p>
+<ol class="arabic simple">
+<li><p>Changes in <span class="math notranslate nohighlight">\(H\)</span>, <span class="math notranslate nohighlight">\(\lambda E\)</span>, &amp; momentum flux (<span class="math notranslate nohighlight">\(\tau\)</span>) are less than 10%.</p></li>
+<li><p>Mean flow is one-dimensional.</p></li>
+<li><p>Coriolis and pressure gradient forces are negligible.</p></li>
+</ol>
+</div>
+<div class="admonition-in-unstable-stable-stability-condition admonition">
+<p class="admonition-title">In unstable/stable stability condition</p>
+<ul class="simple">
+<li><p>Wind:       <span class="math notranslate nohighlight">\(U_{stable} &lt; U_{neutral} &lt; U_{unstable}\)</span></p></li>
+<li><p>Mixing:     <span class="math notranslate nohighlight">\(\tau_{stable} &lt; \tau_{neutral} &lt; \tau_{unstable}\)</span></p></li>
+<li><p>Resistance:  <span class="math notranslate nohighlight">\(r_{stable} &gt; r_{neutral} &gt; r_{unstable}\)</span></p></li>
+</ul>
+<figure>
+  <img src="../_static/images/wind_profile_in_diff_stability.png" alt="Wind profile in diff. stability" style="width:50%">
+  <figcaption>Figure 6.1. Illustration of mean wind profile in stable, neutral, and unstable stability conditions.</figcaption>
+</figure>
+</div>
+<p>(<span id="id1">[<a class="reference internal" href="../references.html#id2" title="David J Stensrud. Parameterization schemes: keys to understanding numerical weather prediction models. Cambridge University Press, 2007.">Stensrud, 2007</a>]</span>)</p>
+<br>
+<br>
+<ul class="simple">
+<li><p>The effect of stability is represented by the correction terms (<span class="math notranslate nohighlight">\(\textcolor{purple}{\psi_h}\)</span>) with the length scale (<span class="math notranslate nohighlight">\(\textcolor{green}{L}\)</span>). However, a detail description of the stability correction will not be discussed in this lecture.</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+r_h = \frac{1}{ku_*} \left[ \textrm{ln} \left( \frac{z_r}{z_0} \right) - \textcolor{purple}{\psi_h}(\frac{z_r}{\textcolor{green}{L}}) + \textcolor{purple}{\psi_h}(\frac{z_0}{\textcolor{green}{L}})  \right]  \tag{6.12}
+\]</div>
+<br>
+<br>
+<hr>
+</section>
+<section id="how-to-calculate-u-in-lsm">
+<h3>How to calculate <span class="math notranslate nohighlight">\(u_*\)</span> in LSM<a class="headerlink" href="#how-to-calculate-u-in-lsm" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>We need to know <span class="math notranslate nohighlight">\(\textcolor{red}{u_*}\)</span> to compute <span class="math notranslate nohighlight">\(\textcolor{orange}{r_h}\)</span> to compute <span class="math notranslate nohighlight">\(\textcolor{blue}{H}\)</span>.</p></li>
+<li><p>Through observations and scaling analysis, the following wind profile relationship has been found:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\frac{\overline{u}(z_r)}{\textcolor{red}{u_*}} = \frac{1}{k} \left[ \textrm{ln} \left( \frac{z_r}{z_0} \right) - \psi_m(\frac{z_r}{L}) + \psi_m(\frac{z_0}{L})  \right]      \tag{6.13}
+\]</div>
+<br>
+<ul class="simple">
+<li><p>Rewrite Eq. 6.13 and then we get</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\textcolor{red}{u_*} = \frac{k \overline{u}(z_r)}{ \left[ \textrm{ln} \left( \frac{z_r}{z_0} \right) - \psi_m(\frac{z_r}{L}) + \psi_m(\frac{z_0}{L})  \right] }      \tag{6.14}
+\]</div>
+<br>
+<ul class="simple">
+<li><p>Then, we have to know <span class="math notranslate nohighlight">\(L\)</span>. From the observation, it is given as</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+L = - \frac{ \textcolor{red}{u_*^3}}{k\frac{g}{T_0} \frac{ \textcolor{blue}{H}}{\rho c_p}}       \tag{6.15}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(T_0\)</span> is the temperature scaling.</p>
+<br>
+<div class="danger admonition">
+<p class="admonition-title">Accordingly,</p>
+<ul class="simple">
+<li><p>We need to know <span class="math notranslate nohighlight">\(\textcolor{red}{u_*}\)</span> and <span class="math notranslate nohighlight">\(\textcolor{blue}{H}\)</span> to calculate <span class="math notranslate nohighlight">\(\textcolor{red}{u_*}\)</span>, and ultimately <span class="math notranslate nohighlight">\(\textcolor{blue}{H}\)</span>. 🤨</p></li>
+<li><p>This means… it’s impossible to calculate <span class="math notranslate nohighlight">\(\textcolor{red}{u_*}\)</span>, <span class="math notranslate nohighlight">\(\textcolor{orange}{r_h}\)</span>, and as well as <span class="math notranslate nohighlight">\(\textcolor{blue}{H}\)</span>. 🤯</p></li>
+</ul>
+</div>
+<br>
+<ul class="simple">
+<li><p>To avoid this problem, we relates <span class="math notranslate nohighlight">\(\textcolor{green}{L}\)</span> to the bulk Richardson number (<span class="math notranslate nohighlight">\(Ri_b\)</span>) as found in the observation <span id="id2">[<a class="reference internal" href="../references.html#id9" title="Yutaka Izumi. Kansas 1968 field program data report. Number 379. Air Force Cambridge Research Laboratories, Air Force Systems Command, United …, 1971.">Izumi, 1971</a>]</span> and calculate <span class="math notranslate nohighlight">\(\textcolor{red}{u_*}\)</span>, <span class="math notranslate nohighlight">\(\textcolor{orange}{r_h}\)</span>, and <span class="math notranslate nohighlight">\(\textcolor{blue}{H}\)</span> with the following steps:</p></li>
+</ul>
+<figure>
+  <img src="../_static/images/sensible_heat_flux_04.png">
+</figure><br>
+<br>
+<br>
+<hr>
+</section>
+</section>
+<section id="practice-6-1">
+<h2>Practice 6.1<a class="headerlink" href="#practice-6-1" title="Link to this heading">#</a></h2>
+<p>Compute <span class="math notranslate nohighlight">\(r_h\)</span> and <span class="math notranslate nohighlight">\(H\)</span> using observed atmospheric variables at Daegu ASOS station in April 2012. Assume that</p>
+<ol class="arabic simple">
+<li><p>Observed variables contain <span class="math notranslate nohighlight">\(T_a\)</span>, <span class="math notranslate nohighlight">\(T_s\)</span><sup><a href="#footnote-1">*</a></sup>, <span class="math notranslate nohighlight">\(U\)</span>, <span class="math notranslate nohighlight">\(SW_d\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(z_r\)</span> is 20 m</p></li>
+<li><p><span class="math notranslate nohighlight">\(z_0\)</span> is 0.15 m</p></li>
+</ol>
+<p><a name="footnote-1">*</a> <span class="math notranslate nohighlight">\(T_s\)</span> 값이 너무 튀기때문에 <span class="math notranslate nohighlight">\(T_s = T_s * 0.2 + T_a * 0.8\)</span>로 사용하세요.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">function_package</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">fp</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ASOS</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;../data/ASOS_processed_2012033100-2012050200.nc&#39;</span><span class="p">)</span>
+<span class="n">ASOS_Daegu</span> <span class="o">=</span> <span class="n">ASOS</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">STN</span><span class="o">=</span><span class="mi">143</span><span class="p">)</span> <span class="c1"># Daegu station</span>
+<span class="n">ASOS_Daegu</span> <span class="o">=</span> <span class="n">ASOS_Daegu</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="s1">&#39;2012-04-01 00:00&#39;</span><span class="p">,</span> <span class="s1">&#39;2012-04-05 00:00&#39;</span><span class="p">))</span>
+<span class="n">ASOS_Daegu</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewBox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewBox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+  --xr-border-color: var(--jp-border-color2, #e0e0e0);
+  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
+  --xr-background-color: var(--jp-layout-color0, white);
+  --xr-background-color-row-even: var(--jp-layout-color1, white);
+  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+}
+
+html[theme="dark"],
+html[data-theme="dark"],
+body[data-theme="dark"],
+body.vscode-dark {
+  --xr-font-color0: rgba(255, 255, 255, 1);
+  --xr-font-color2: rgba(255, 255, 255, 0.54);
+  --xr-font-color3: rgba(255, 255, 255, 0.38);
+  --xr-border-color: #1f1f1f;
+  --xr-disabled-color: #515151;
+  --xr-background-color: #111111;
+  --xr-background-color-row-even: #111111;
+  --xr-background-color-row-odd: #313131;
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 0 20px 0 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: inline-block;
+  opacity: 0;
+  height: 0;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:focus + label {
+  border: 2px solid var(--xr-font-color0);
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: "►";
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: "▼";
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: "(";
+}
+
+.xr-dim-list:after {
+  content: ")";
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ",";
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  margin-bottom: 0;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-index-preview {
+  grid-column: 2 / 5;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  display: none;
+  background-color: var(--xr-background-color) !important;
+  padding-bottom: 5px !important;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data,
+.xr-index-data-in:checked ~ .xr-index-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-index-name div,
+.xr-index-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2,
+.xr-no-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.Dataset&gt; Size: 44kB
+Dimensions:     (time: 97)
+Coordinates:
+    STN         int64 8B 143
+  * time        (time) datetime64[ns] 776B 2012-04-01 ... 2012-04-05
+Data variables: (12/49)
+    YYMMDDHHMI  (time) &lt;U12 5kB ...
+    WD          (time) float64 776B ...
+    WS          (time) float64 776B ...
+    GST         (time) float64 776B ...
+    GST.1       (time) float64 776B ...
+    GST.2       (time) float64 776B ...
+    ...          ...
+    IR          (time) float64 776B ...
+    IX          (time) float64 776B ...
+    STN_EN      &lt;U13 52B ...
+    LON         float64 8B ...
+    LAT         float64 8B ...
+    Height      float64 8B ...</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-cc5b7c7b-69cd-47f1-8bd9-fccd46acce2b' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-cc5b7c7b-69cd-47f1-8bd9-fccd46acce2b' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>time</span>: 97</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-6fcd9a74-ba17-4a86-b422-12205266ae78' class='xr-section-summary-in' type='checkbox'  checked><label for='section-6fcd9a74-ba17-4a86-b422-12205266ae78' class='xr-section-summary' >Coordinates: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>STN</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>143</div><input id='attrs-1e8b53ac-a27b-4e65-a6cb-8dede5f82401' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-1e8b53ac-a27b-4e65-a6cb-8dede5f82401' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-891467c4-cd1d-465f-b8a4-edcd014e3ef7' class='xr-var-data-in' type='checkbox'><label for='data-891467c4-cd1d-465f-b8a4-edcd014e3ef7' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array(143)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>2012-04-01 ... 2012-04-05</div><input id='attrs-3ff69cff-ff99-41c5-8764-7053f9ddacaf' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-3ff69cff-ff99-41c5-8764-7053f9ddacaf' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-27591b5f-7de1-4d98-ae33-70da5b6f4345' class='xr-var-data-in' type='checkbox'><label for='data-27591b5f-7de1-4d98-ae33-70da5b6f4345' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([&#x27;2012-04-01T00:00:00.000000000&#x27;, &#x27;2012-04-01T01:00:00.000000000&#x27;,
+       &#x27;2012-04-01T02:00:00.000000000&#x27;, &#x27;2012-04-01T03:00:00.000000000&#x27;,
+       &#x27;2012-04-01T04:00:00.000000000&#x27;, &#x27;2012-04-01T05:00:00.000000000&#x27;,
+       &#x27;2012-04-01T06:00:00.000000000&#x27;, &#x27;2012-04-01T07:00:00.000000000&#x27;,
+       &#x27;2012-04-01T08:00:00.000000000&#x27;, &#x27;2012-04-01T09:00:00.000000000&#x27;,
+       &#x27;2012-04-01T10:00:00.000000000&#x27;, &#x27;2012-04-01T11:00:00.000000000&#x27;,
+       &#x27;2012-04-01T12:00:00.000000000&#x27;, &#x27;2012-04-01T13:00:00.000000000&#x27;,
+       &#x27;2012-04-01T14:00:00.000000000&#x27;, &#x27;2012-04-01T15:00:00.000000000&#x27;,
+       &#x27;2012-04-01T16:00:00.000000000&#x27;, &#x27;2012-04-01T17:00:00.000000000&#x27;,
+       &#x27;2012-04-01T18:00:00.000000000&#x27;, &#x27;2012-04-01T19:00:00.000000000&#x27;,
+       &#x27;2012-04-01T20:00:00.000000000&#x27;, &#x27;2012-04-01T21:00:00.000000000&#x27;,
+       &#x27;2012-04-01T22:00:00.000000000&#x27;, &#x27;2012-04-01T23:00:00.000000000&#x27;,
+       &#x27;2012-04-02T00:00:00.000000000&#x27;, &#x27;2012-04-02T01:00:00.000000000&#x27;,
+       &#x27;2012-04-02T02:00:00.000000000&#x27;, &#x27;2012-04-02T03:00:00.000000000&#x27;,
+       &#x27;2012-04-02T04:00:00.000000000&#x27;, &#x27;2012-04-02T05:00:00.000000000&#x27;,
+       &#x27;2012-04-02T06:00:00.000000000&#x27;, &#x27;2012-04-02T07:00:00.000000000&#x27;,
+       &#x27;2012-04-02T08:00:00.000000000&#x27;, &#x27;2012-04-02T09:00:00.000000000&#x27;,
+       &#x27;2012-04-02T10:00:00.000000000&#x27;, &#x27;2012-04-02T11:00:00.000000000&#x27;,
+       &#x27;2012-04-02T12:00:00.000000000&#x27;, &#x27;2012-04-02T13:00:00.000000000&#x27;,
+       &#x27;2012-04-02T14:00:00.000000000&#x27;, &#x27;2012-04-02T15:00:00.000000000&#x27;,
+       &#x27;2012-04-02T16:00:00.000000000&#x27;, &#x27;2012-04-02T17:00:00.000000000&#x27;,
+       &#x27;2012-04-02T18:00:00.000000000&#x27;, &#x27;2012-04-02T19:00:00.000000000&#x27;,
+       &#x27;2012-04-02T20:00:00.000000000&#x27;, &#x27;2012-04-02T21:00:00.000000000&#x27;,
+       &#x27;2012-04-02T22:00:00.000000000&#x27;, &#x27;2012-04-02T23:00:00.000000000&#x27;,
+       &#x27;2012-04-03T00:00:00.000000000&#x27;, &#x27;2012-04-03T01:00:00.000000000&#x27;,
+       &#x27;2012-04-03T02:00:00.000000000&#x27;, &#x27;2012-04-03T03:00:00.000000000&#x27;,
+       &#x27;2012-04-03T04:00:00.000000000&#x27;, &#x27;2012-04-03T05:00:00.000000000&#x27;,
+       &#x27;2012-04-03T06:00:00.000000000&#x27;, &#x27;2012-04-03T07:00:00.000000000&#x27;,
+       &#x27;2012-04-03T08:00:00.000000000&#x27;, &#x27;2012-04-03T09:00:00.000000000&#x27;,
+       &#x27;2012-04-03T10:00:00.000000000&#x27;, &#x27;2012-04-03T11:00:00.000000000&#x27;,
+       &#x27;2012-04-03T12:00:00.000000000&#x27;, &#x27;2012-04-03T13:00:00.000000000&#x27;,
+       &#x27;2012-04-03T14:00:00.000000000&#x27;, &#x27;2012-04-03T15:00:00.000000000&#x27;,
+       &#x27;2012-04-03T16:00:00.000000000&#x27;, &#x27;2012-04-03T17:00:00.000000000&#x27;,
+       &#x27;2012-04-03T18:00:00.000000000&#x27;, &#x27;2012-04-03T19:00:00.000000000&#x27;,
+       &#x27;2012-04-03T20:00:00.000000000&#x27;, &#x27;2012-04-03T21:00:00.000000000&#x27;,
+       &#x27;2012-04-03T22:00:00.000000000&#x27;, &#x27;2012-04-03T23:00:00.000000000&#x27;,
+       &#x27;2012-04-04T00:00:00.000000000&#x27;, &#x27;2012-04-04T01:00:00.000000000&#x27;,
+       &#x27;2012-04-04T02:00:00.000000000&#x27;, &#x27;2012-04-04T03:00:00.000000000&#x27;,
+       &#x27;2012-04-04T04:00:00.000000000&#x27;, &#x27;2012-04-04T05:00:00.000000000&#x27;,
+       &#x27;2012-04-04T06:00:00.000000000&#x27;, &#x27;2012-04-04T07:00:00.000000000&#x27;,
+       &#x27;2012-04-04T08:00:00.000000000&#x27;, &#x27;2012-04-04T09:00:00.000000000&#x27;,
+       &#x27;2012-04-04T10:00:00.000000000&#x27;, &#x27;2012-04-04T11:00:00.000000000&#x27;,
+       &#x27;2012-04-04T12:00:00.000000000&#x27;, &#x27;2012-04-04T13:00:00.000000000&#x27;,
+       &#x27;2012-04-04T14:00:00.000000000&#x27;, &#x27;2012-04-04T15:00:00.000000000&#x27;,
+       &#x27;2012-04-04T16:00:00.000000000&#x27;, &#x27;2012-04-04T17:00:00.000000000&#x27;,
+       &#x27;2012-04-04T18:00:00.000000000&#x27;, &#x27;2012-04-04T19:00:00.000000000&#x27;,
+       &#x27;2012-04-04T20:00:00.000000000&#x27;, &#x27;2012-04-04T21:00:00.000000000&#x27;,
+       &#x27;2012-04-04T22:00:00.000000000&#x27;, &#x27;2012-04-04T23:00:00.000000000&#x27;,
+       &#x27;2012-04-05T00:00:00.000000000&#x27;], dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-01389266-05a8-4f3b-91c6-cbd7d8806376' class='xr-section-summary-in' type='checkbox'  ><label for='section-01389266-05a8-4f3b-91c6-cbd7d8806376' class='xr-section-summary' >Data variables: <span>(49)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>YYMMDDHHMI</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>&lt;U12</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-c74a277e-9a01-486d-ba78-58dead95120b' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-c74a277e-9a01-486d-ba78-58dead95120b' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-5843b91a-5c97-4ced-8567-9168f0a068d9' class='xr-var-data-in' type='checkbox'><label for='data-5843b91a-5c97-4ced-8567-9168f0a068d9' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[97 values with dtype=&lt;U12]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>WD</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-97059ea8-1cd6-4394-8318-f4b1e66f3cf2' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-97059ea8-1cd6-4394-8318-f4b1e66f3cf2' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-2ce1a465-a3bb-4b39-9c13-cad2158eba16' class='xr-var-data-in' type='checkbox'><label for='data-2ce1a465-a3bb-4b39-9c13-cad2158eba16' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[97 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>WS</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-f8a141a2-22c2-490f-b403-2ec10f4ee1f5' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-f8a141a2-22c2-490f-b403-2ec10f4ee1f5' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-03276211-f140-42b8-b23c-1e4228caf640' class='xr-var-data-in' type='checkbox'><label for='data-03276211-f140-42b8-b23c-1e4228caf640' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[97 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>GST</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-08954f94-956b-45a7-92b0-2f63abd29f59' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-08954f94-956b-45a7-92b0-2f63abd29f59' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-6e180085-74bc-4fd3-a359-cd99427dcffe' class='xr-var-data-in' type='checkbox'><label for='data-6e180085-74bc-4fd3-a359-cd99427dcffe' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[97 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>GST.1</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-a4b64c98-61b5-4efb-936f-ee698f865b35' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-a4b64c98-61b5-4efb-936f-ee698f865b35' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-92740960-436d-4c9a-b841-aefb9b8444eb' class='xr-var-data-in' type='checkbox'><label for='data-92740960-436d-4c9a-b841-aefb9b8444eb' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[97 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>GST.2</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-921ca0f5-7054-417e-b03c-365b97c17f20' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-921ca0f5-7054-417e-b03c-365b97c17f20' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-57a03a0b-d597-49e0-8689-2c9b1454893e' class='xr-var-data-in' type='checkbox'><label for='data-57a03a0b-d597-49e0-8689-2c9b1454893e' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[97 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>PA</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-15698b72-4cf3-4571-924c-ed4f0cec88ab' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-15698b72-4cf3-4571-924c-ed4f0cec88ab' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-9df3a79f-3c2a-493d-9fc3-be68762b7353' class='xr-var-data-in' type='checkbox'><label for='data-9df3a79f-3c2a-493d-9fc3-be68762b7353' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[97 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>PS</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-70093556-a3e7-42bd-a2b9-8a4cb335e73d' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-70093556-a3e7-42bd-a2b9-8a4cb335e73d' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-10f773e0-4a05-4425-bec1-910c3147a8a4' class='xr-var-data-in' type='checkbox'><label for='data-10f773e0-4a05-4425-bec1-910c3147a8a4' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[97 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>PT</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-b35ec95f-a6ab-43ed-9f85-3dd114d40696' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-b35ec95f-a6ab-43ed-9f85-3dd114d40696' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-68061eb3-1eaf-454c-900f-93b55668d523' class='xr-var-data-in' type='checkbox'><label for='data-68061eb3-1eaf-454c-900f-93b55668d523' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[97 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>PR</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-44a308d2-0a90-4f7b-b8a8-6b1521fe9be7' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-44a308d2-0a90-4f7b-b8a8-6b1521fe9be7' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-f5e07359-e3d5-4767-badd-0b18b44b9498' class='xr-var-data-in' type='checkbox'><label for='data-f5e07359-e3d5-4767-badd-0b18b44b9498' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[97 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>TA</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-6374dd0f-0915-4881-ba4a-4311aa1f7b60' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-6374dd0f-0915-4881-ba4a-4311aa1f7b60' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-83c8061b-41f2-4143-933d-172c42b27f4b' class='xr-var-data-in' type='checkbox'><label for='data-83c8061b-41f2-4143-933d-172c42b27f4b' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[97 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>TD</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-7e471b02-6486-48b1-820d-a3bdf4b47294' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-7e471b02-6486-48b1-820d-a3bdf4b47294' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-6f5535d6-7b66-4673-a45e-7a9e509965c5' class='xr-var-data-in' type='checkbox'><label for='data-6f5535d6-7b66-4673-a45e-7a9e509965c5' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[97 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>HM</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-023b3ff1-bd75-4654-b265-3c0358be52eb' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-023b3ff1-bd75-4654-b265-3c0358be52eb' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-9ca96dad-41a5-4c4e-9277-67da889231e1' class='xr-var-data-in' type='checkbox'><label for='data-9ca96dad-41a5-4c4e-9277-67da889231e1' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[97 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>PV</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-9b30a5bc-d5bc-4c16-b19f-56cc3e73b357' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-9b30a5bc-d5bc-4c16-b19f-56cc3e73b357' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-19412fc4-69ec-4665-9ed8-a7faa93f757d' class='xr-var-data-in' type='checkbox'><label for='data-19412fc4-69ec-4665-9ed8-a7faa93f757d' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[97 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>RN</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-5e5f8eed-8905-42f2-85ef-9cb00cc11d99' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-5e5f8eed-8905-42f2-85ef-9cb00cc11d99' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-b00b9305-ac6e-4191-aef1-b83870f4c1ed' class='xr-var-data-in' type='checkbox'><label for='data-b00b9305-ac6e-4191-aef1-b83870f4c1ed' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[97 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>RN.1</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-9c847689-8d60-4b73-b712-23d76fab2aab' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-9c847689-8d60-4b73-b712-23d76fab2aab' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-a8496798-0265-42b3-bbba-89dcfc84e671' class='xr-var-data-in' type='checkbox'><label for='data-a8496798-0265-42b3-bbba-89dcfc84e671' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[97 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>RN.2</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-f3af9190-8d8d-4eae-834c-32683e550243' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-f3af9190-8d8d-4eae-834c-32683e550243' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-31ddd036-b565-4fc2-8e66-cff8485f0161' class='xr-var-data-in' type='checkbox'><label for='data-31ddd036-b565-4fc2-8e66-cff8485f0161' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[97 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>RN.3</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-80ca33d9-b7fd-4c76-b7bd-65e6ab8348ca' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-80ca33d9-b7fd-4c76-b7bd-65e6ab8348ca' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-9492bb19-c46b-430b-959c-4a5e20e768c7' class='xr-var-data-in' type='checkbox'><label for='data-9492bb19-c46b-430b-959c-4a5e20e768c7' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[97 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>SD</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-1595a45e-fc97-4251-96de-01e7d291e768' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-1595a45e-fc97-4251-96de-01e7d291e768' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-3b16e368-accc-4890-87d4-5a689b1d6e4e' class='xr-var-data-in' type='checkbox'><label for='data-3b16e368-accc-4890-87d4-5a689b1d6e4e' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[97 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>SD.1</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-1fd214a3-afc7-48a6-b239-7b202fbda512' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-1fd214a3-afc7-48a6-b239-7b202fbda512' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-42fb1ecd-6705-4356-9f0c-c9092530e2cc' class='xr-var-data-in' type='checkbox'><label for='data-42fb1ecd-6705-4356-9f0c-c9092530e2cc' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[97 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>SD.2</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-33feab72-2bb9-49bf-8eb9-0381f5a0c370' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-33feab72-2bb9-49bf-8eb9-0381f5a0c370' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-da7cb04b-6a3d-4e2c-b47d-dd721175aafd' class='xr-var-data-in' type='checkbox'><label for='data-da7cb04b-6a3d-4e2c-b47d-dd721175aafd' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[97 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>WC</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-b11431fb-e561-4255-b3c8-31b03871fde2' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-b11431fb-e561-4255-b3c8-31b03871fde2' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-14d0fc4e-1641-4484-af95-56c96cbda3d4' class='xr-var-data-in' type='checkbox'><label for='data-14d0fc4e-1641-4484-af95-56c96cbda3d4' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[97 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>WP</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-23451289-f3e9-4794-82d6-8655849070d8' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-23451289-f3e9-4794-82d6-8655849070d8' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-84107e46-23b6-4a5a-b7e1-026119560333' class='xr-var-data-in' type='checkbox'><label for='data-84107e46-23b6-4a5a-b7e1-026119560333' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[97 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>WW</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>&lt;U8</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-a47af235-a43c-4784-8807-3cf591a54d5e' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-a47af235-a43c-4784-8807-3cf591a54d5e' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-c3853457-ac4d-4f59-beca-5d66793a56ab' class='xr-var-data-in' type='checkbox'><label for='data-c3853457-ac4d-4f59-beca-5d66793a56ab' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[97 values with dtype=&lt;U8]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>CA</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-392640b0-1b59-4b11-8355-fb24c6fb46b2' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-392640b0-1b59-4b11-8355-fb24c6fb46b2' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-585b7d92-b225-450f-b42d-fe7585f2703b' class='xr-var-data-in' type='checkbox'><label for='data-585b7d92-b225-450f-b42d-fe7585f2703b' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[97 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>CA.1</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-329ab7bf-89e9-4072-b5a9-96518595c78a' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-329ab7bf-89e9-4072-b5a9-96518595c78a' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-75815d2e-215b-46c1-9a95-aaaca6a89f58' class='xr-var-data-in' type='checkbox'><label for='data-75815d2e-215b-46c1-9a95-aaaca6a89f58' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[97 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>CH</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-ccb9a689-2b38-4330-b753-37338e012c5c' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-ccb9a689-2b38-4330-b753-37338e012c5c' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-9ff10967-3eb0-4e68-a182-09d7e25d8f3a' class='xr-var-data-in' type='checkbox'><label for='data-9ff10967-3eb0-4e68-a182-09d7e25d8f3a' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[97 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>CT</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>&lt;U6</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-461da2cc-9ccd-4c4d-9d97-8c58b07c3171' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-461da2cc-9ccd-4c4d-9d97-8c58b07c3171' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-0be1ba49-c14e-45aa-b401-5d0614027799' class='xr-var-data-in' type='checkbox'><label for='data-0be1ba49-c14e-45aa-b401-5d0614027799' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[97 values with dtype=&lt;U6]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>CT.1</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-1838ff80-b9b6-4a86-9f04-b5954b2806f1' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-1838ff80-b9b6-4a86-9f04-b5954b2806f1' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-5d116e7b-20ee-4c86-b339-02ae1d1aabe4' class='xr-var-data-in' type='checkbox'><label for='data-5d116e7b-20ee-4c86-b339-02ae1d1aabe4' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[97 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>CT.2</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-e46afb2a-d424-4597-9d61-c41ad246dcb5' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-e46afb2a-d424-4597-9d61-c41ad246dcb5' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-a01c6c98-8a91-40e1-a90c-45bdc9e66706' class='xr-var-data-in' type='checkbox'><label for='data-a01c6c98-8a91-40e1-a90c-45bdc9e66706' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[97 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>CT.3</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-fdd10a7c-29da-424b-a3bb-d36cc8810125' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-fdd10a7c-29da-424b-a3bb-d36cc8810125' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-f70ca09e-a765-46d9-bb93-056f3a1dae87' class='xr-var-data-in' type='checkbox'><label for='data-f70ca09e-a765-46d9-bb93-056f3a1dae87' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[97 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>VS</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-2cfbbaa5-b361-4cfb-80f2-1fd60c005a41' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-2cfbbaa5-b361-4cfb-80f2-1fd60c005a41' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-ea032391-f67a-4bc2-993e-df1b7f3647b8' class='xr-var-data-in' type='checkbox'><label for='data-ea032391-f67a-4bc2-993e-df1b7f3647b8' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[97 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>SS</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-d7bba010-cbd1-454f-9fac-73c7d2ad3572' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-d7bba010-cbd1-454f-9fac-73c7d2ad3572' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-721478dd-5c21-4187-9e7b-821571baf598' class='xr-var-data-in' type='checkbox'><label for='data-721478dd-5c21-4187-9e7b-821571baf598' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[97 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>SI</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-597b01aa-0853-425e-bfd6-97bba041d5bd' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-597b01aa-0853-425e-bfd6-97bba041d5bd' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-1e6c0936-c74d-42ef-b8bb-50e715fc5dac' class='xr-var-data-in' type='checkbox'><label for='data-1e6c0936-c74d-42ef-b8bb-50e715fc5dac' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[97 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>ST</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-43737dc7-e6b2-4fa8-bd40-2c42ae9d43b2' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-43737dc7-e6b2-4fa8-bd40-2c42ae9d43b2' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-51e4bf08-24f5-47e1-8218-83580b18c715' class='xr-var-data-in' type='checkbox'><label for='data-51e4bf08-24f5-47e1-8218-83580b18c715' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[97 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>TS</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-3b98e01e-50c6-4dfc-a2bd-acebe5dd7603' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-3b98e01e-50c6-4dfc-a2bd-acebe5dd7603' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-876dad12-cf19-4410-bd4e-fbecbb52370d' class='xr-var-data-in' type='checkbox'><label for='data-876dad12-cf19-4410-bd4e-fbecbb52370d' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[97 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>TE</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-24c620c7-a9a4-4c7b-98c1-6ffbfea84844' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-24c620c7-a9a4-4c7b-98c1-6ffbfea84844' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-3c0e1c79-35f0-4e3b-92cd-ce290cb9b197' class='xr-var-data-in' type='checkbox'><label for='data-3c0e1c79-35f0-4e3b-92cd-ce290cb9b197' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[97 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>TE.1</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-373f5191-30d5-496e-b408-37d625930ef5' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-373f5191-30d5-496e-b408-37d625930ef5' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-011164dd-ee1c-4a3a-9a65-f2d96f2dfc67' class='xr-var-data-in' type='checkbox'><label for='data-011164dd-ee1c-4a3a-9a65-f2d96f2dfc67' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[97 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>TE.2</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-acf0939b-912c-4c01-b13a-a12737826b53' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-acf0939b-912c-4c01-b13a-a12737826b53' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-708a6408-2f70-42bb-b272-06183903abd0' class='xr-var-data-in' type='checkbox'><label for='data-708a6408-2f70-42bb-b272-06183903abd0' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[97 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>TE.3</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-22dc50e1-489e-4296-bf31-95566f05ce3c' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-22dc50e1-489e-4296-bf31-95566f05ce3c' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-9a9a96ad-28ab-4ea1-95b8-e405fb964f97' class='xr-var-data-in' type='checkbox'><label for='data-9a9a96ad-28ab-4ea1-95b8-e405fb964f97' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[97 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>ST.1</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-b86ef5ee-c258-42ba-9ef9-101239f97222' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-b86ef5ee-c258-42ba-9ef9-101239f97222' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-58c1046f-bf87-4290-bb0e-9fc247380d44' class='xr-var-data-in' type='checkbox'><label for='data-58c1046f-bf87-4290-bb0e-9fc247380d44' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[97 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>WH</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-f29b3075-9456-4ceb-afa7-0ecb9fc19a97' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-f29b3075-9456-4ceb-afa7-0ecb9fc19a97' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-1b8617ab-738e-4568-9aa5-460e74b4e837' class='xr-var-data-in' type='checkbox'><label for='data-1b8617ab-738e-4568-9aa5-460e74b4e837' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[97 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>BF</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-c8d93fbb-abe2-409c-84a4-ab9896b5f79f' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-c8d93fbb-abe2-409c-84a4-ab9896b5f79f' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-4fd12ad2-956c-4a1f-9815-f8aed32d7ffb' class='xr-var-data-in' type='checkbox'><label for='data-4fd12ad2-956c-4a1f-9815-f8aed32d7ffb' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[97 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>IR</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-3738bf28-6f23-497a-acad-4295770cce1c' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-3738bf28-6f23-497a-acad-4295770cce1c' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-f0f04113-2084-4e36-ba17-3a6fdda3f2f1' class='xr-var-data-in' type='checkbox'><label for='data-f0f04113-2084-4e36-ba17-3a6fdda3f2f1' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[97 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>IX</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-ee92289d-ced0-44d1-81a9-038fa5306531' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-ee92289d-ced0-44d1-81a9-038fa5306531' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-38c72e06-4f6b-4bc4-a63d-b6c560bec3c5' class='xr-var-data-in' type='checkbox'><label for='data-38c72e06-4f6b-4bc4-a63d-b6c560bec3c5' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[97 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>STN_EN</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>&lt;U13</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-9a4c4677-5c9d-4660-abdc-68380ce36fda' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-9a4c4677-5c9d-4660-abdc-68380ce36fda' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-87ac871c-533b-4ac4-a0a5-79307c4df7aa' class='xr-var-data-in' type='checkbox'><label for='data-87ac871c-533b-4ac4-a0a5-79307c4df7aa' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[1 values with dtype=&lt;U13]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>LON</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-a37a68ae-a40a-4384-b2f9-ed4c84b0dfc1' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-a37a68ae-a40a-4384-b2f9-ed4c84b0dfc1' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-7e141257-e569-4569-a872-fd14b0626230' class='xr-var-data-in' type='checkbox'><label for='data-7e141257-e569-4569-a872-fd14b0626230' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[1 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>LAT</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-a5753fda-e975-41db-a1e6-af439e4cd949' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-a5753fda-e975-41db-a1e6-af439e4cd949' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-ba644729-708e-4de8-bec5-293a291e0dce' class='xr-var-data-in' type='checkbox'><label for='data-ba644729-708e-4de8-bec5-293a291e0dce' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[1 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>Height</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-73412438-f46d-4ab7-8494-76c9589d8b04' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-73412438-f46d-4ab7-8494-76c9589d8b04' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-51bc5307-961a-41d0-b78d-2912fccc9487' class='xr-var-data-in' type='checkbox'><label for='data-51bc5307-961a-41d0-b78d-2912fccc9487' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[1 values with dtype=float64]</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-9bc62c46-5ab3-4e6b-a838-4169906a6fed' class='xr-section-summary-in' type='checkbox'  ><label for='section-9bc62c46-5ab3-4e6b-a838-4169906a6fed' class='xr-section-summary' >Indexes: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>time</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-71223719-8c3f-471e-93c9-e5fe641e6ded' class='xr-index-data-in' type='checkbox'/><label for='index-71223719-8c3f-471e-93c9-e5fe641e6ded' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(DatetimeIndex([&#x27;2012-04-01 00:00:00&#x27;, &#x27;2012-04-01 01:00:00&#x27;,
+               &#x27;2012-04-01 02:00:00&#x27;, &#x27;2012-04-01 03:00:00&#x27;,
+               &#x27;2012-04-01 04:00:00&#x27;, &#x27;2012-04-01 05:00:00&#x27;,
+               &#x27;2012-04-01 06:00:00&#x27;, &#x27;2012-04-01 07:00:00&#x27;,
+               &#x27;2012-04-01 08:00:00&#x27;, &#x27;2012-04-01 09:00:00&#x27;,
+               &#x27;2012-04-01 10:00:00&#x27;, &#x27;2012-04-01 11:00:00&#x27;,
+               &#x27;2012-04-01 12:00:00&#x27;, &#x27;2012-04-01 13:00:00&#x27;,
+               &#x27;2012-04-01 14:00:00&#x27;, &#x27;2012-04-01 15:00:00&#x27;,
+               &#x27;2012-04-01 16:00:00&#x27;, &#x27;2012-04-01 17:00:00&#x27;,
+               &#x27;2012-04-01 18:00:00&#x27;, &#x27;2012-04-01 19:00:00&#x27;,
+               &#x27;2012-04-01 20:00:00&#x27;, &#x27;2012-04-01 21:00:00&#x27;,
+               &#x27;2012-04-01 22:00:00&#x27;, &#x27;2012-04-01 23:00:00&#x27;,
+               &#x27;2012-04-02 00:00:00&#x27;, &#x27;2012-04-02 01:00:00&#x27;,
+               &#x27;2012-04-02 02:00:00&#x27;, &#x27;2012-04-02 03:00:00&#x27;,
+               &#x27;2012-04-02 04:00:00&#x27;, &#x27;2012-04-02 05:00:00&#x27;,
+               &#x27;2012-04-02 06:00:00&#x27;, &#x27;2012-04-02 07:00:00&#x27;,
+               &#x27;2012-04-02 08:00:00&#x27;, &#x27;2012-04-02 09:00:00&#x27;,
+               &#x27;2012-04-02 10:00:00&#x27;, &#x27;2012-04-02 11:00:00&#x27;,
+               &#x27;2012-04-02 12:00:00&#x27;, &#x27;2012-04-02 13:00:00&#x27;,
+               &#x27;2012-04-02 14:00:00&#x27;, &#x27;2012-04-02 15:00:00&#x27;,
+               &#x27;2012-04-02 16:00:00&#x27;, &#x27;2012-04-02 17:00:00&#x27;,
+               &#x27;2012-04-02 18:00:00&#x27;, &#x27;2012-04-02 19:00:00&#x27;,
+               &#x27;2012-04-02 20:00:00&#x27;, &#x27;2012-04-02 21:00:00&#x27;,
+               &#x27;2012-04-02 22:00:00&#x27;, &#x27;2012-04-02 23:00:00&#x27;,
+               &#x27;2012-04-03 00:00:00&#x27;, &#x27;2012-04-03 01:00:00&#x27;,
+               &#x27;2012-04-03 02:00:00&#x27;, &#x27;2012-04-03 03:00:00&#x27;,
+               &#x27;2012-04-03 04:00:00&#x27;, &#x27;2012-04-03 05:00:00&#x27;,
+               &#x27;2012-04-03 06:00:00&#x27;, &#x27;2012-04-03 07:00:00&#x27;,
+               &#x27;2012-04-03 08:00:00&#x27;, &#x27;2012-04-03 09:00:00&#x27;,
+               &#x27;2012-04-03 10:00:00&#x27;, &#x27;2012-04-03 11:00:00&#x27;,
+               &#x27;2012-04-03 12:00:00&#x27;, &#x27;2012-04-03 13:00:00&#x27;,
+               &#x27;2012-04-03 14:00:00&#x27;, &#x27;2012-04-03 15:00:00&#x27;,
+               &#x27;2012-04-03 16:00:00&#x27;, &#x27;2012-04-03 17:00:00&#x27;,
+               &#x27;2012-04-03 18:00:00&#x27;, &#x27;2012-04-03 19:00:00&#x27;,
+               &#x27;2012-04-03 20:00:00&#x27;, &#x27;2012-04-03 21:00:00&#x27;,
+               &#x27;2012-04-03 22:00:00&#x27;, &#x27;2012-04-03 23:00:00&#x27;,
+               &#x27;2012-04-04 00:00:00&#x27;, &#x27;2012-04-04 01:00:00&#x27;,
+               &#x27;2012-04-04 02:00:00&#x27;, &#x27;2012-04-04 03:00:00&#x27;,
+               &#x27;2012-04-04 04:00:00&#x27;, &#x27;2012-04-04 05:00:00&#x27;,
+               &#x27;2012-04-04 06:00:00&#x27;, &#x27;2012-04-04 07:00:00&#x27;,
+               &#x27;2012-04-04 08:00:00&#x27;, &#x27;2012-04-04 09:00:00&#x27;,
+               &#x27;2012-04-04 10:00:00&#x27;, &#x27;2012-04-04 11:00:00&#x27;,
+               &#x27;2012-04-04 12:00:00&#x27;, &#x27;2012-04-04 13:00:00&#x27;,
+               &#x27;2012-04-04 14:00:00&#x27;, &#x27;2012-04-04 15:00:00&#x27;,
+               &#x27;2012-04-04 16:00:00&#x27;, &#x27;2012-04-04 17:00:00&#x27;,
+               &#x27;2012-04-04 18:00:00&#x27;, &#x27;2012-04-04 19:00:00&#x27;,
+               &#x27;2012-04-04 20:00:00&#x27;, &#x27;2012-04-04 21:00:00&#x27;,
+               &#x27;2012-04-04 22:00:00&#x27;, &#x27;2012-04-04 23:00:00&#x27;,
+               &#x27;2012-04-05 00:00:00&#x27;],
+              dtype=&#x27;datetime64[ns]&#x27;, name=&#x27;time&#x27;, freq=None))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-7e6f5b59-f036-40b9-8284-f1b9d02a2a5f' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-7e6f5b59-f036-40b9-8284-f1b9d02a2a5f' class='xr-section-summary'  title='Expand/collapse section'>Attributes: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'></dl></div></li></ul></div></div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Assign observed variables</span>
+<span class="n">Ta</span>         <span class="o">=</span> <span class="n">ASOS_Daegu</span><span class="p">[</span><span class="s1">&#39;TA&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="mf">273.15</span>        <span class="c1"># Convert C to K</span>
+<span class="n">Ts</span>         <span class="o">=</span> <span class="n">ASOS_Daegu</span><span class="p">[</span><span class="s1">&#39;TS&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="mf">273.15</span>        <span class="c1"># Convert C to K</span>
+<span class="n">Pa</span>         <span class="o">=</span> <span class="n">ASOS_Daegu</span><span class="p">[</span><span class="s1">&#39;PA&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mf">100.</span>          <span class="c1"># Convert hPa to Pa</span>
+<span class="n">wind_speed</span> <span class="o">=</span> <span class="n">ASOS_Daegu</span><span class="p">[</span><span class="s1">&#39;WS&#39;</span><span class="p">]</span>                 <span class="c1"># m/s</span>
+<span class="n">SWd</span>        <span class="o">=</span> <span class="n">ASOS_Daegu</span><span class="p">[</span><span class="s1">&#39;SI&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mf">1.0e6</span> <span class="o">/</span> <span class="mi">3600</span>  <span class="c1"># Convert MJ/m2 to W/m2</span>
+<span class="n">SWd</span>        <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">SWd</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">SWd</span><span class="p">)</span>        <span class="c1"># Set negative SWd to 0</span>
+
+
+<span class="c1"># Interpolate hourly data to minutely data to avoid numerical instability</span>
+<span class="n">minutely_time</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span>
+    <span class="n">start</span><span class="o">=</span><span class="n">Ta</span><span class="o">.</span><span class="n">time</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">item</span><span class="p">(),</span> 
+    <span class="n">end</span><span class="o">=</span><span class="n">Ta</span><span class="o">.</span><span class="n">time</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">item</span><span class="p">(),</span> 
+    <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;1min&#39;</span>
+<span class="p">)</span>
+
+<span class="n">Ta</span> <span class="o">=</span> <span class="n">Ta</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">minutely_time</span><span class="p">)</span>
+<span class="n">Ts</span> <span class="o">=</span> <span class="n">Ts</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">minutely_time</span><span class="p">)</span>
+<span class="n">wind_speed</span> <span class="o">=</span> <span class="n">wind_speed</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">minutely_time</span><span class="p">)</span>
+<span class="n">Pa</span> <span class="o">=</span> <span class="n">Pa</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">minutely_time</span><span class="p">)</span>
+<span class="n">SWd</span> <span class="o">=</span> <span class="n">SWd</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">minutely_time</span><span class="p">)</span>
+
+<span class="n">rho</span>        <span class="o">=</span> <span class="n">Pa</span> <span class="o">/</span> <span class="p">(</span><span class="n">fp</span><span class="o">.</span><span class="n">R_D</span> <span class="o">*</span> <span class="n">Ta</span><span class="p">)</span> <span class="c1"># kg/m3</span>
+
+
+<span class="c1"># Setup</span>
+<span class="n">zr</span> <span class="o">=</span> <span class="mf">20.0</span> <span class="c1"># height of the model lowest layer [m]</span>
+<span class="n">z0</span> <span class="o">=</span> <span class="mf">0.15</span> <span class="c1"># roughness length [m]</span>
+
+<span class="n">Ts</span> <span class="o">=</span> <span class="p">(</span><span class="n">Ts</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.2</span> <span class="o">+</span> <span class="n">Ta</span> <span class="o">*</span> <span class="mf">0.8</span> <span class="c1"># Blend air and surface temperature as surface temperature is too spiky</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+<br>
+<p>Check Observed variables:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.dates</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">mdates</span>
+
+
+<span class="n">sns</span><span class="o">.</span><span class="n">set_context</span><span class="p">(</span><span class="s1">&#39;talk&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">nrows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;Atmospheric input variables at Daegu Site&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">time_info</span> <span class="o">=</span> <span class="n">Ta</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+
+<span class="c1"># surface temperature</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time_info</span><span class="p">,</span> <span class="n">Ts</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;$T_s$ (K)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+
+<span class="c1"># air temperature</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time_info</span><span class="p">,</span> <span class="n">Ta</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;C0&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Air temperature&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time_info</span><span class="p">,</span> <span class="n">Ts</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;C1&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Surface temperature&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;$T_a$ (K)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+
+<span class="c1"># wind speed</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time_info</span><span class="p">,</span> <span class="n">wind_speed</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Wind speed (m/s)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+
+<span class="c1"># Downward shortwave radiation</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time_info</span><span class="p">,</span> <span class="n">SWd</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;$SW_d$ (W/m$^2$)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+
+<span class="c1"># # properties</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+        <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">mdates</span><span class="o">.</span><span class="n">DayLocator</span><span class="p">(</span><span class="n">interval</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">despine</span><span class="p">(</span><span class="n">offset</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/104349d0df0a236d9e83c93c86d60785f897feb048c16474d547e3ef253cc757.png" src="../_images/104349d0df0a236d9e83c93c86d60785f897feb048c16474d547e3ef253cc757.png" />
+</div>
+</div>
+<br>
+<br>
+<hr>
+<section id="atmospheric-variables-ri-b">
+<h3>① atmospheric variables → <span class="math notranslate nohighlight">\(Ri_b\)</span><a class="headerlink" href="#atmospheric-variables-ri-b" title="Link to this heading">#</a></h3>
+<figure>
+  <img src="../_static/images/sensible_heat_flux_04.png">
+</figure><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">calculate_bulk_richardson_number</span><span class="p">(</span><span class="n">Ts</span><span class="p">,</span> <span class="n">Ta</span><span class="p">,</span> <span class="n">Pa</span><span class="p">,</span> <span class="n">wind_speed</span><span class="p">,</span> <span class="n">zr</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Adapted lines from revise MM5 surface-layer scheme.</span>
+<span class="sd">    Input:</span>
+<span class="sd">        Ta: air temperature [K]</span>
+<span class="sd">        Pa: air pressure [Pa]</span>
+<span class="sd">        wind_speed: wind speed [m/s]</span>
+<span class="sd">        zr: the height of the model lowest layer [m]</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="c1"># Constants from function_package.py</span>
+    <span class="c1"># G   = 9.81               # Gravitational acceleration [m/s2]</span>
+    <span class="c1"># P_1000mb = 100000.0      # Pressure at 1000 mb [Pa]</span>
+    <span class="c1"># P_SFC    = 101300.0      # Surface pressure [Pa]</span>
+    <span class="c1"># R_D = 287.0              # Gas constant of dry air [J/K/kg]</span>
+    <span class="c1"># C_P = 7.0 * R_D / 2.0    # the specific heat at constant pressure</span>
+    <span class="c1"># R_OVER_C_P = R_D / C_P</span>
+
+    <span class="n">theta_a_conversion</span> <span class="o">=</span> <span class="p">(</span> <span class="n">fp</span><span class="o">.</span><span class="n">P_1000mb</span> <span class="o">/</span> <span class="n">Pa</span><span class="p">)</span> <span class="o">**</span> <span class="n">fp</span><span class="o">.</span><span class="n">R_OVER_C_P</span>
+    <span class="n">theta_a</span> <span class="o">=</span> <span class="n">Ta</span> <span class="o">*</span> <span class="n">theta_a_conversion</span>
+
+    <span class="c1"># Assume surface pressure is 1013 hPa</span>
+    <span class="n">theta_s_conversion</span> <span class="o">=</span> <span class="p">(</span> <span class="n">fp</span><span class="o">.</span><span class="n">P_1000mb</span> <span class="o">/</span> <span class="n">fp</span><span class="o">.</span><span class="n">P_SFC</span><span class="p">)</span> <span class="o">**</span> <span class="n">fp</span><span class="o">.</span><span class="n">R_OVER_C_P</span>
+    <span class="n">theta_s</span> <span class="o">=</span> <span class="n">Ts</span> <span class="o">*</span> <span class="n">theta_s_conversion</span>
+    
+    <span class="n">dtheta_over_dz</span> <span class="o">=</span> <span class="n">theta_a</span> <span class="o">-</span> <span class="n">theta_s</span> 
+
+    <span class="n">g_over_theta_a</span> <span class="o">=</span> <span class="n">fp</span><span class="o">.</span><span class="n">G</span> <span class="o">/</span> <span class="n">theta_a</span>
+    
+    <span class="n">Rib</span> <span class="o">=</span> <span class="n">g_over_theta_a</span> <span class="o">*</span> <span class="n">zr</span> <span class="o">*</span> <span class="n">dtheta_over_dz</span> <span class="o">/</span> <span class="p">(</span><span class="n">wind_speed</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">Rib</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate bulk Richardson number</span>
+
+<span class="n">Rib</span> <span class="o">=</span> <span class="n">calculate_bulk_richardson_number</span><span class="p">(</span><span class="n">Ts</span><span class="p">,</span> <span class="n">Ta</span><span class="p">,</span> <span class="n">Pa</span><span class="p">,</span> <span class="n">wind_speed</span><span class="p">,</span> <span class="n">zr</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">set_context</span><span class="p">(</span><span class="s1">&#39;talk&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">nrows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+
+<span class="c1">### bulk Richardson number</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Rib</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">],</span> <span class="n">Rib</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Bulk Richardson number [-]&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">mdates</span><span class="o">.</span><span class="n">DayLocator</span><span class="p">(</span><span class="n">interval</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">despine</span><span class="p">(</span><span class="n">offset</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/d72e76d3071b9a571a85374abd96d4edccafa984874148aee80a4dfdc4ea2d10.png" src="../_images/d72e76d3071b9a571a85374abd96d4edccafa984874148aee80a4dfdc4ea2d10.png" />
+</div>
+</div>
+<br>
+<br>
+<br>
+<hr>
+</section>
+<section id="ri-b-z-l">
+<h3>② <span class="math notranslate nohighlight">\(Ri_b\)</span> → <span class="math notranslate nohighlight">\(z/L\)</span><a class="headerlink" href="#ri-b-z-l" title="Link to this heading">#</a></h3>
+<figure>
+  <img src="../_static/images/sensible_heat_flux_04.png">
+</figure><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wind_speed_np</span> <span class="o">=</span> <span class="n">wind_speed</span><span class="o">.</span><span class="n">values</span>
+<span class="n">Rib_np</span>        <span class="o">=</span> <span class="n">Rib</span><span class="o">.</span><span class="n">values</span>
+<span class="n">z_over_L</span>      <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">Rib_np</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">n</span><span class="p">,</span> <span class="n">RiB_n</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">Rib_np</span><span class="p">):</span>
+
+    <span class="c1">### Neutral</span>
+    <span class="k">if</span> <span class="n">RiB_n</span> <span class="o">==</span> <span class="mf">0.0</span><span class="p">:</span>
+        <span class="n">z_over_L</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+    <span class="c1">### Stable or unstable</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">z_over_L</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">fp</span><span class="o">.</span><span class="n">calculate_z_over_L</span><span class="p">(</span><span class="n">RiB_n</span><span class="p">,</span> <span class="n">zr</span><span class="p">,</span> <span class="n">z0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+<br>
+<br>
+<hr>
+</section>
+<section id="z-l-psi-m-psi-h">
+<h3>③ <span class="math notranslate nohighlight">\(z/L\)</span> → <span class="math notranslate nohighlight">\(\psi_m\)</span>, <span class="math notranslate nohighlight">\(\psi_h\)</span><a class="headerlink" href="#z-l-psi-m-psi-h" title="Link to this heading">#</a></h3>
+<figure>
+  <img src="../_static/images/sensible_heat_flux_04.png">
+</figure><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">KARMAN</span> <span class="o">=</span> <span class="mf">0.4</span> <span class="c1"># von Karman constant</span>
+
+<span class="c1"># Initialize variables</span>
+<span class="n">z0_over_L</span>  <span class="o">=</span> <span class="n">z_over_L</span> <span class="o">/</span> <span class="n">zr</span> <span class="o">*</span> <span class="n">z0</span>
+<span class="n">psi_m</span><span class="p">,</span> <span class="n">psi_h</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">Rib_np</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">Rib_np</span><span class="p">)</span>
+
+
+<span class="k">for</span> <span class="n">n</span><span class="p">,</span> <span class="n">br_n</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">Rib_np</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">br_n</span> <span class="o">==</span> <span class="mf">0.0</span><span class="p">:</span>     <span class="c1"># Neutral</span>
+        <span class="n">psi_m</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="n">psi_h</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span>
+    
+    <span class="k">elif</span> <span class="n">br_n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>      <span class="c1"># Stable</span>
+        <span class="n">psi_m</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">fp</span><span class="o">.</span><span class="n">calculate_psim_stable</span><span class="p">(</span><span class="n">z_over_L</span><span class="p">[</span><span class="n">n</span><span class="p">])</span> <span class="o">-</span> <span class="n">fp</span><span class="o">.</span><span class="n">calculate_psim_stable</span><span class="p">(</span><span class="n">z0_over_L</span><span class="p">[</span><span class="n">n</span><span class="p">])</span>
+        <span class="n">psi_h</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">fp</span><span class="o">.</span><span class="n">calculate_psih_stable</span><span class="p">(</span><span class="n">z_over_L</span><span class="p">[</span><span class="n">n</span><span class="p">])</span> <span class="o">-</span> <span class="n">fp</span><span class="o">.</span><span class="n">calculate_psih_stable</span><span class="p">(</span><span class="n">z0_over_L</span><span class="p">[</span><span class="n">n</span><span class="p">])</span>
+    
+    <span class="k">elif</span> <span class="n">br_n</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>      <span class="c1"># Unstable</span>
+        <span class="n">psi_m</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">fp</span><span class="o">.</span><span class="n">calculate_psim_unstable</span><span class="p">(</span><span class="n">z_over_L</span><span class="p">[</span><span class="n">n</span><span class="p">])</span> <span class="o">-</span> <span class="n">fp</span><span class="o">.</span><span class="n">calculate_psim_unstable</span><span class="p">(</span><span class="n">z0_over_L</span><span class="p">[</span><span class="n">n</span><span class="p">])</span>
+        <span class="n">psi_h</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">fp</span><span class="o">.</span><span class="n">calculate_psih_unstable</span><span class="p">(</span><span class="n">z_over_L</span><span class="p">[</span><span class="n">n</span><span class="p">])</span> <span class="o">-</span> <span class="n">fp</span><span class="o">.</span><span class="n">calculate_psih_unstable</span><span class="p">(</span><span class="n">z0_over_L</span><span class="p">[</span><span class="n">n</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+<br>
+<br>
+<hr>
+</section>
+<section id="psi-m-psi-h-u">
+<h3>④ <span class="math notranslate nohighlight">\(\psi_m\)</span>, <span class="math notranslate nohighlight">\(\psi_h\)</span> → <span class="math notranslate nohighlight">\(u_*\)</span><a class="headerlink" href="#psi-m-psi-h-u" title="Link to this heading">#</a></h3>
+<figure>
+  <img src="../_static/images/sensible_heat_flux_04.png">
+</figure><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zr_over_z0</span> <span class="o">=</span> <span class="n">zr</span> <span class="o">/</span> <span class="n">z0</span>
+
+<span class="n">ust</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">Rib_np</span><span class="p">)</span>
+<span class="n">ust</span> <span class="o">=</span> <span class="n">KARMAN</span> <span class="o">*</span> <span class="n">wind_speed</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">zr_over_z0</span><span class="p">)</span> <span class="o">-</span> <span class="n">psi_m</span><span class="p">)</span>
+<span class="n">diagnosed_ust</span> <span class="o">=</span> <span class="n">ust</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+<br>
+<br>
+<hr>
+</section>
+<section id="u-r-h">
+<h3>⑤ <span class="math notranslate nohighlight">\(u_*\)</span> → <span class="math notranslate nohighlight">\(r_h\)</span><a class="headerlink" href="#u-r-h" title="Link to this heading">#</a></h3>
+<figure>
+  <img src="../_static/images/sensible_heat_flux_04.png">
+</figure><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rh</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">Rib_np</span><span class="p">)</span>
+<span class="n">rh</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">KARMAN</span> <span class="o">*</span> <span class="n">ust</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">zr_over_z0</span><span class="p">)</span> <span class="o">-</span> <span class="n">psi_h</span> <span class="p">)</span>
+<span class="n">diagnosed_rh</span> <span class="o">=</span> <span class="n">rh</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+<br>
+<br>
+<hr>
+</section>
+<section id="r-h-h">
+<h3>⑥ <span class="math notranslate nohighlight">\(r_h\)</span> → <span class="math notranslate nohighlight">\(H\)</span><a class="headerlink" href="#r-h-h" title="Link to this heading">#</a></h3>
+<figure>
+  <img src="../_static/images/sensible_heat_flux_04.png">
+</figure>
+<br>
+<br>
+<br>
+<hr>
+<p>Finally recall Eq. 6.7,</p>
+<div class="math notranslate nohighlight">
+\[
+H = \frac{\rho c_p (T_s - T_a)}{r_h}        \tag{6.7}
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">H</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">Rib_np</span><span class="p">)</span>
+<span class="n">H</span> <span class="o">=</span> <span class="n">rho</span> <span class="o">*</span> <span class="n">fp</span><span class="o">.</span><span class="n">C_P</span> <span class="o">*</span> <span class="p">(</span><span class="n">Ts</span> <span class="o">-</span> <span class="n">Ta</span><span class="p">)</span> <span class="o">/</span> <span class="n">rh</span>
+<span class="n">diagnosed_H</span> <span class="o">=</span> <span class="n">H</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">set_context</span><span class="p">(</span><span class="s1">&#39;talk&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">nrows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+
+<span class="n">time_info</span> <span class="o">=</span> <span class="n">Ta</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+
+<span class="c1">### Friction velocity</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time_info</span><span class="p">,</span> <span class="n">ust</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;$u_*$ (m/s)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+
+<span class="c1">### Aerodynamic resistance</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time_info</span><span class="p">,</span> <span class="n">rh</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;$r_h$ (s/m)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+
+<span class="c1">### Temperature difference</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time_info</span><span class="p">,</span> <span class="n">Ts</span> <span class="o">-</span> <span class="n">Ta</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;$\Delta$ T (K)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+
+<span class="c1">### Sensible Heat flux</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time_info</span><span class="p">,</span> <span class="n">H</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;$H$ (W/m$^2$)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+
+
+<span class="c1">### properties</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+        <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">mdates</span><span class="o">.</span><span class="n">DayLocator</span><span class="p">(</span><span class="n">interval</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">despine</span><span class="p">(</span><span class="n">offset</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/c2af2fc3ef22f3687ff4f7f99b913fb116398ebe49ea32646af01ef75aa93844.png" src="../_images/c2af2fc3ef22f3687ff4f7f99b913fb116398ebe49ea32646af01ef75aa93844.png" />
+</div>
+</div>
+<br>
+<br>
+<br>
+<hr>
+</section>
+</section>
+<section id="practice-6-2">
+<h2>Practice 6.2<a class="headerlink" href="#practice-6-2" title="Link to this heading">#</a></h2>
+<p>Predict <span class="math notranslate nohighlight">\(T_s\)</span> at Daegu ASOS station in April 2012 using observed atmospheric variables and Compare prediced <span class="math notranslate nohighlight">\(T_s\)</span> to observed <span class="math notranslate nohighlight">\(T_s\)</span>. Assume that</p>
+<ol class="arabic simple">
+<li><p>Observed variables contain <span class="math notranslate nohighlight">\(T_a\)</span>, <span class="math notranslate nohighlight">\(U\)</span>, &amp; <span class="math notranslate nohighlight">\(SW_d\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(z_r\)</span> is 20 m</p></li>
+<li><p><span class="math notranslate nohighlight">\(z_0\)</span> is 0.15 m</p></li>
+<li><p><span class="math notranslate nohighlight">\(T_s\)</span> at initial time is set to observed <span class="math notranslate nohighlight">\(T_s\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(C_{soil}\)</span> is <span class="math notranslate nohighlight">\(c_{soil} \cdot d_s\)</span>, where <span class="math notranslate nohighlight">\(c_{soil}\)</span> is heat capacity of soil (2.0 <span class="math notranslate nohighlight">\(\times\)</span> 10<sup>6</sup> J/m<sup>3</sup>/K) and <span class="math notranslate nohighlight">\(d_s\)</span> is depth of soil (0.07 m)</p></li>
+<li><p><span class="math notranslate nohighlight">\(\alpha\)</span> is 0.3</p></li>
+<li><p><span class="math notranslate nohighlight">\(LW_d\)</span> is 400 W/m<sup>2</sub></p></li>
+<li><p><span class="math notranslate nohighlight">\(\lambda E\)</span> is 30% of <span class="math notranslate nohighlight">\(SW_d\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(G\)</span> is 0 W/m<sup>2</sub></p></li>
+</ol>
+<p>→ Predict <span class="math notranslate nohighlight">\(\textcolor{red}{T_s}\)</span>, <span class="math notranslate nohighlight">\(\textcolor{red}{LW_u}\)</span>, <span class="math notranslate nohighlight">\(\textcolor{red}{H}\)</span> by prescribing <span class="math notranslate nohighlight">\(SW_d\)</span>, <span class="math notranslate nohighlight">\(LW_d\)</span>, <span class="math notranslate nohighlight">\(\lambda E\)</span>, <span class="math notranslate nohighlight">\(G\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+C_{soil} \textcolor{red}{\frac{\partial T_{s}}{\partial t}} = (1-\alpha) \cdot SW_d + LW_d - \textcolor{red}{LW_u} - \textcolor{red}{H} - \lambda E - G       \tag{1.1}
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Setup</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="mi">60</span> <span class="c1"># s</span>
+
+<span class="n">LWd</span> <span class="o">=</span> <span class="mi">400</span>       <span class="c1"># W/m2</span>
+<span class="n">LE</span>  <span class="o">=</span> <span class="mf">0.3</span> <span class="o">*</span> <span class="n">SWd</span> <span class="c1"># W/m2</span>
+<span class="n">G</span>   <span class="o">=</span> <span class="mf">0.0</span>       <span class="c1"># W/m2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Predict Ts</span>
+
+<span class="n">time_dimension_size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">Ts</span><span class="p">)</span>
+
+<span class="c1">### Create an array for Ts</span>
+<span class="n">predicted_Ts</span>  <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">time_dimension_size</span><span class="p">)</span>
+<span class="n">predicted_ust</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">time_dimension_size</span><span class="p">)</span>
+<span class="n">predicted_rh</span>  <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">time_dimension_size</span><span class="p">)</span>
+<span class="n">predicted_H</span>   <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">time_dimension_size</span><span class="p">)</span>
+
+<span class="c1">### Initial value of Ts</span>
+<span class="n">predicted_Ts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">Ts</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">tqdm</span><span class="w"> </span><span class="kn">import</span> <span class="n">tqdm</span>
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">time_dimension_size</span><span class="p">),</span> <span class="n">desc</span><span class="o">=</span><span class="s1">&#39;Predicting surface temperature&#39;</span><span class="p">):</span>
+
+    <span class="c1">### ①</span>
+    <span class="n">Rib</span> <span class="o">=</span> <span class="n">calculate_bulk_richardson_number</span><span class="p">(</span><span class="n">predicted_Ts</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">Ta</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">Pa</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">wind_speed</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">zr</span><span class="p">)</span>
+
+    <span class="c1">### ②</span>
+    <span class="k">if</span> <span class="n">Rib</span> <span class="o">==</span> <span class="mf">0.0</span><span class="p">:</span>
+        <span class="n">z_over_L</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">z_over_L</span> <span class="o">=</span> <span class="n">fp</span><span class="o">.</span><span class="n">calculate_z_over_L</span><span class="p">(</span><span class="n">Rib</span><span class="p">,</span> <span class="n">zr</span><span class="p">,</span> <span class="n">z0</span><span class="p">)</span>
+
+    <span class="c1">### ③</span>
+    <span class="n">z0_over_L</span>  <span class="o">=</span> <span class="n">z_over_L</span> <span class="o">/</span> <span class="n">zr</span> <span class="o">*</span> <span class="n">z0</span>
+    
+    <span class="k">if</span> <span class="n">Rib</span> <span class="o">==</span> <span class="mf">0.0</span><span class="p">:</span>     <span class="c1"># Neutral</span>
+        <span class="n">psi_m</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="n">psi_h</span> <span class="o">=</span> <span class="mf">0.0</span>
+    
+    <span class="k">elif</span> <span class="n">Rib</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>      <span class="c1"># Stable</span>
+        <span class="n">psi_m</span> <span class="o">=</span> <span class="n">fp</span><span class="o">.</span><span class="n">calculate_psim_stable</span><span class="p">(</span><span class="n">z_over_L</span><span class="p">)</span> <span class="o">-</span> <span class="n">fp</span><span class="o">.</span><span class="n">calculate_psim_stable</span><span class="p">(</span><span class="n">z0_over_L</span><span class="p">)</span>
+        <span class="n">psi_h</span> <span class="o">=</span> <span class="n">fp</span><span class="o">.</span><span class="n">calculate_psih_stable</span><span class="p">(</span><span class="n">z_over_L</span><span class="p">)</span> <span class="o">-</span> <span class="n">fp</span><span class="o">.</span><span class="n">calculate_psih_stable</span><span class="p">(</span><span class="n">z0_over_L</span><span class="p">)</span>
+    
+    <span class="k">elif</span> <span class="n">Rib</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>      <span class="c1"># Unstable</span>
+        <span class="n">psi_m</span> <span class="o">=</span> <span class="n">fp</span><span class="o">.</span><span class="n">calculate_psim_unstable</span><span class="p">(</span><span class="n">z_over_L</span><span class="p">)</span> <span class="o">-</span> <span class="n">fp</span><span class="o">.</span><span class="n">calculate_psim_unstable</span><span class="p">(</span><span class="n">z0_over_L</span><span class="p">)</span>
+        <span class="n">psi_h</span> <span class="o">=</span> <span class="n">fp</span><span class="o">.</span><span class="n">calculate_psih_unstable</span><span class="p">(</span><span class="n">z_over_L</span><span class="p">)</span> <span class="o">-</span> <span class="n">fp</span><span class="o">.</span><span class="n">calculate_psih_unstable</span><span class="p">(</span><span class="n">z0_over_L</span><span class="p">)</span>
+
+    <span class="c1">### ④</span>
+    <span class="n">zr_over_z0</span> <span class="o">=</span> <span class="n">zr</span> <span class="o">/</span> <span class="n">z0</span>
+    <span class="n">ust</span> <span class="o">=</span> <span class="n">KARMAN</span> <span class="o">*</span> <span class="n">wind_speed</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">zr_over_z0</span><span class="p">)</span> <span class="o">-</span> <span class="n">psi_m</span><span class="p">)</span>
+    <span class="n">predicted_ust</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">ust</span>
+
+    <span class="c1">### ⑤</span>
+    <span class="n">rh</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">KARMAN</span> <span class="o">*</span> <span class="n">ust</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">zr_over_z0</span><span class="p">)</span> <span class="o">-</span> <span class="n">psi_h</span> <span class="p">)</span>
+    <span class="n">predicted_rh</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">rh</span>
+
+    <span class="c1">### ⑥</span>
+    <span class="n">H</span> <span class="o">=</span> <span class="n">rho</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">fp</span><span class="o">.</span><span class="n">C_P</span> <span class="o">*</span> <span class="p">(</span><span class="n">predicted_Ts</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">Ta</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="n">rh</span>
+    <span class="n">predicted_H</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">H</span>
+
+    <span class="c1">### Upward longwave radiation</span>
+    <span class="n">LWu</span> <span class="o">=</span> <span class="n">fp</span><span class="o">.</span><span class="n">calculate_LWu</span><span class="p">(</span><span class="n">predicted_Ts</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+
+    <span class="c1">### Surface temperature</span>
+    <span class="n">predicted_Ts</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">predicted_Ts</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">dt</span><span class="o">/</span><span class="n">fp</span><span class="o">.</span><span class="n">C_SOIL</span> <span class="o">*</span> <span class="p">(</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">fp</span><span class="o">.</span><span class="n">ALBEDO</span><span class="p">)</span> <span class="o">*</span> <span class="n">SWd</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">LWd</span> <span class="o">-</span> <span class="n">LWu</span> <span class="o">-</span> <span class="n">H</span> <span class="o">-</span> <span class="n">LE</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">G</span> <span class="p">)</span>
+
+
+<span class="n">predicted_Ts</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">predicted_Ts</span><span class="p">,</span> <span class="n">dims</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="n">coords</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;time&#39;</span><span class="p">:</span> <span class="n">Ts</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">},</span>
+                 <span class="n">attrs</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;K&#39;</span><span class="p">,</span>
+                        <span class="s1">&#39;long_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Predicted surface temperature&#39;</span><span class="p">},)</span>
+<span class="n">predicted_Ts</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Predicting surface temperature: 100%|██████████| 5760/5760 [02:15&lt;00:00, 42.50it/s] 
+</pre></div>
+</div>
+<div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewBox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewBox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+  --xr-border-color: var(--jp-border-color2, #e0e0e0);
+  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
+  --xr-background-color: var(--jp-layout-color0, white);
+  --xr-background-color-row-even: var(--jp-layout-color1, white);
+  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+}
+
+html[theme="dark"],
+html[data-theme="dark"],
+body[data-theme="dark"],
+body.vscode-dark {
+  --xr-font-color0: rgba(255, 255, 255, 1);
+  --xr-font-color2: rgba(255, 255, 255, 0.54);
+  --xr-font-color3: rgba(255, 255, 255, 0.38);
+  --xr-border-color: #1f1f1f;
+  --xr-disabled-color: #515151;
+  --xr-background-color: #111111;
+  --xr-background-color-row-even: #111111;
+  --xr-background-color-row-odd: #313131;
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 0 20px 0 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: inline-block;
+  opacity: 0;
+  height: 0;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:focus + label {
+  border: 2px solid var(--xr-font-color0);
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: "►";
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: "▼";
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: "(";
+}
+
+.xr-dim-list:after {
+  content: ")";
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ",";
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  margin-bottom: 0;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-index-preview {
+  grid-column: 2 / 5;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  display: none;
+  background-color: var(--xr-background-color) !important;
+  padding-bottom: 5px !important;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data,
+.xr-index-data-in:checked ~ .xr-index-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-index-name div,
+.xr-index-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2,
+.xr-no-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.DataArray (time: 5761)&gt; Size: 46kB
+array([277.93      , 277.9721541 , 278.01335518, ..., 286.9522502 ,
+       286.93572614, 286.91910892], shape=(5761,))
+Coordinates:
+  * time     (time) datetime64[ns] 46kB 2012-04-01 ... 2012-04-05
+Attributes:
+    units:      K
+    long_name:  Predicted surface temperature</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'></div><ul class='xr-dim-list'><li><span class='xr-has-index'>time</span>: 5761</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-2bc05f53-ea20-4ad8-8f57-7d1c0e0d1eec' class='xr-array-in' type='checkbox' checked><label for='section-2bc05f53-ea20-4ad8-8f57-7d1c0e0d1eec' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>277.9 278.0 278.0 278.1 278.1 278.1 ... 287.0 287.0 287.0 286.9 286.9</span></div><div class='xr-array-data'><pre>array([277.93      , 277.9721541 , 278.01335518, ..., 286.9522502 ,
+       286.93572614, 286.91910892], shape=(5761,))</pre></div></div></li><li class='xr-section-item'><input id='section-f3a0c25d-41d1-420e-be7c-862ea99504c1' class='xr-section-summary-in' type='checkbox'  checked><label for='section-f3a0c25d-41d1-420e-be7c-862ea99504c1' class='xr-section-summary' >Coordinates: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>2012-04-01 ... 2012-04-05</div><input id='attrs-82c9190d-09e9-427f-877c-67d1c415d5ac' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-82c9190d-09e9-427f-877c-67d1c415d5ac' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-027b6adb-f993-4ba3-aeaa-3f79c9dcbf95' class='xr-var-data-in' type='checkbox'><label for='data-027b6adb-f993-4ba3-aeaa-3f79c9dcbf95' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([&#x27;2012-04-01T00:00:00.000000000&#x27;, &#x27;2012-04-01T00:01:00.000000000&#x27;,
+       &#x27;2012-04-01T00:02:00.000000000&#x27;, ..., &#x27;2012-04-04T23:58:00.000000000&#x27;,
+       &#x27;2012-04-04T23:59:00.000000000&#x27;, &#x27;2012-04-05T00:00:00.000000000&#x27;],
+      shape=(5761,), dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-a119575c-7e27-4624-be06-02cb24364f22' class='xr-section-summary-in' type='checkbox'  ><label for='section-a119575c-7e27-4624-be06-02cb24364f22' class='xr-section-summary' >Indexes: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>time</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-2ec4f29a-9423-4793-928b-78c7664282cd' class='xr-index-data-in' type='checkbox'/><label for='index-2ec4f29a-9423-4793-928b-78c7664282cd' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(DatetimeIndex([&#x27;2012-04-01 00:00:00&#x27;, &#x27;2012-04-01 00:01:00&#x27;,
+               &#x27;2012-04-01 00:02:00&#x27;, &#x27;2012-04-01 00:03:00&#x27;,
+               &#x27;2012-04-01 00:04:00&#x27;, &#x27;2012-04-01 00:05:00&#x27;,
+               &#x27;2012-04-01 00:06:00&#x27;, &#x27;2012-04-01 00:07:00&#x27;,
+               &#x27;2012-04-01 00:08:00&#x27;, &#x27;2012-04-01 00:09:00&#x27;,
+               ...
+               &#x27;2012-04-04 23:51:00&#x27;, &#x27;2012-04-04 23:52:00&#x27;,
+               &#x27;2012-04-04 23:53:00&#x27;, &#x27;2012-04-04 23:54:00&#x27;,
+               &#x27;2012-04-04 23:55:00&#x27;, &#x27;2012-04-04 23:56:00&#x27;,
+               &#x27;2012-04-04 23:57:00&#x27;, &#x27;2012-04-04 23:58:00&#x27;,
+               &#x27;2012-04-04 23:59:00&#x27;, &#x27;2012-04-05 00:00:00&#x27;],
+              dtype=&#x27;datetime64[ns]&#x27;, name=&#x27;time&#x27;, length=5761, freq=None))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-d88d83ee-1089-4dda-b868-ceeca83e3058' class='xr-section-summary-in' type='checkbox'  checked><label for='section-d88d83ee-1089-4dda-b868-ceeca83e3058' class='xr-section-summary' >Attributes: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>K</dd><dt><span>long_name :</span></dt><dd>Predicted surface temperature</dd></dl></div></li></ul></div></div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">set_context</span><span class="p">(</span><span class="s1">&#39;talk&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">nrows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+
+<span class="n">time_info</span> <span class="o">=</span> <span class="n">Ts</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+
+<span class="c1">### Friction velocity</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time_info</span><span class="p">,</span> <span class="n">diagnosed_ust</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;C0&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Diagnosed&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time_info</span><span class="p">,</span> <span class="n">predicted_ust</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;C1&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Predicted&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;$u_*$ (m/s)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+
+<span class="c1">### Aerodynamic resistance</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time_info</span><span class="p">,</span> <span class="n">diagnosed_rh</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;C0&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Diagnosed&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time_info</span><span class="p">,</span> <span class="n">predicted_rh</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;C1&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Predicted&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;$r_h$ (s/m)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+
+<span class="c1">### Surface temperature</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time_info</span><span class="p">,</span> <span class="n">Ts</span><span class="p">,</span>           <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;C0&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Observed&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time_info</span><span class="p">,</span> <span class="n">predicted_Ts</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;C1&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Predicted&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;$T_s$ (K)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+
+<span class="c1">### Sensible Heat flux</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time_info</span><span class="p">,</span> <span class="n">diagnosed_H</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;C0&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Diagnosed&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time_info</span><span class="p">,</span> <span class="n">predicted_H</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;C1&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Predicted&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;$H$ (W/m$^2$)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+
+<span class="c1">### properties</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+        <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">mdates</span><span class="o">.</span><span class="n">DayLocator</span><span class="p">(</span><span class="n">interval</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">despine</span><span class="p">(</span><span class="n">offset</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/5e567711643d5e23caab47bc31bcf461f6c518712a1eefe6280dcf22935f1ba1.png" src="../_images/5e567711643d5e23caab47bc31bcf461f6c518712a1eefe6280dcf22935f1ba1.png" />
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "my_kernel"
+        },
+        kernelOptions: {
+            name: "my_kernel",
+            path: "./Lecture"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'my_kernel'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="upward_longwave_radiation.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>Upward shortwave radiation at the surface (<span class="math notranslate nohighlight">\(LW_u\)</span>)</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="latent_heat_flux.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Latent heat flux at the surface (<span class="math notranslate nohighlight">\(\lambda E\)</span>)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aerodynamic-resistance-r-h">Aerodynamic resistance (<span class="math notranslate nohighlight">\(r_h\)</span>)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-calculate-r-h-in-lsm">How to calculate <span class="math notranslate nohighlight">\(r_h\)</span> in LSM</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-calculate-u-in-lsm">How to calculate <span class="math notranslate nohighlight">\(u_*\)</span> in LSM</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practice-6-1">Practice 6.1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#atmospheric-variables-ri-b">① atmospheric variables → <span class="math notranslate nohighlight">\(Ri_b\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ri-b-z-l">② <span class="math notranslate nohighlight">\(Ri_b\)</span> → <span class="math notranslate nohighlight">\(z/L\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#z-l-psi-m-psi-h">③ <span class="math notranslate nohighlight">\(z/L\)</span> → <span class="math notranslate nohighlight">\(\psi_m\)</span>, <span class="math notranslate nohighlight">\(\psi_h\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#psi-m-psi-h-u">④ <span class="math notranslate nohighlight">\(\psi_m\)</span>, <span class="math notranslate nohighlight">\(\psi_h\)</span> → <span class="math notranslate nohighlight">\(u_*\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#u-r-h">⑤ <span class="math notranslate nohighlight">\(u_*\)</span> → <span class="math notranslate nohighlight">\(r_h\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#r-h-h">⑥ <span class="math notranslate nohighlight">\(r_h\)</span> → <span class="math notranslate nohighlight">\(H\)</span></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practice-6-2">Practice 6.2</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Junhong Lee
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
