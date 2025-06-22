@@ -215,9 +215,9 @@ jupyter notebook
 
 
 [junhong_homepage]: https://scholar.google.com/citations?user=CfzQ610AAAAJ&hl=en
-[git_page]: https://scholar.google.com/citations?user=CfzQ610AAAAJ&hl=en
+[git_page]: https://junhonglee89.github.io/KNU_2025_summer_school_LSM/
 [jupyterbook]: https://jupyterbook.org
 [climlab]: https://github.com/climlab/climlab
-[book]: https://brian-rose.github.io/ClimateLaboratoryBook/
-[repo]: https://github.com/brian-rose/ClimateLaboratoryBook
+[book]: https://junhonglee89.github.io/KNU_2025_summer_school_LSM/
+[repo]: https://github.com/junhonglee89/KNU_2025_summer_school_LSM
 [notebook]: https://jupyter-notebook.readthedocs.io/en/stable/
