@@ -43,7 +43,7 @@ The lecture combines theoretical foundations with practical coding exercises usi
  <figcaption>Figure 1. PDF 강의자료 다운 방법</figcaption>
 </figure>
 
-- This book is based on a textbook {cite:p}`stensrud2007parameterization`, and technical documentations of land surface models {cite:p}`reick2021jsbach` and {cite:p}`ek1991osu`.
+- This book is based on a textbook {cite:p}`stensrud2007parameterization`, and technical documentations of land surface models {cite:p}`reick2021jsbach` and OSU 1-D PBL model {cite:p}`ek1991osu`.
 <p style="margin: 0.5em 0;"></p>
 
 - This book is inspired by [Climate Laboratory][climlab], a lecture in University at Albany.
@@ -58,6 +58,8 @@ The lecture combines theoretical foundations with practical coding exercises usi
 
 ### 1. 강사 소개
 **[Junhong Lee (이준홍)][junhong_homepage]**
+
+**Email:** junhonglee89@gmail.com
 
 ##### 학력
 - 2008 - 2012: B.S. in Earth Science Education & Atmospheric Sciences, Kongju National University, Republic of Korea
