@@ -20,15 +20,36 @@ The lecture combines theoretical foundations with practical coding exercises usi
 <br>
 <br>
 
+`````{admonition} About this book
+:class: note
+- This book is powered by [JupyterBook][jupyterbook], and aims to be all of the following:
+    1. **self-reproducing** *(most figures are self-generating in the notebooks)*
+    2. **interactive** *(readers can run and modify code examples)*
+    3. **living document** *(content will continue to evolve, and bug report is welcome)*
+<p style="margin: 0.5em 0;"></p>
+
+
 - [To view the book online, go here][book].
+<p style="margin: 0.5em 0;"></p>
+
 - The book content are all in [github repository][repo].
+<p style="margin: 0.5em 0;"></p>
+
 - 강의 자료는 [이곳][git_page]에서 오른쪽 상단의 다운로드 버튼을 누르면 pdf를 받을 수 있습니다(Fig. 1).
-<!-- git page 링크 수정 필요 -->
+<p style="margin: 0.5em 0;"></p>
 
 <figure>
  <img src="./_static/images/pdf_download.png" alt="PDF 강의자료 다운 방법">
  <figcaption>Figure 1. PDF 강의자료 다운 방법</figcaption>
 </figure>
+
+- This book is based on a textbook {cite:p}`stensrud2007parameterization`, and technical documentations of land surface models {cite:p}`reick2021jsbach` and {cite:p}`ek1991osu`.
+<p style="margin: 0.5em 0;"></p>
+
+- This book is inspired by [Climate Laboratory][climlab], a lecture in University at Albany.
+<p style="margin: 0.5em 0;"></p>
+
+`````
 
 <br>
 <br>
@@ -117,6 +138,8 @@ git clone git@github.com:junhonglee89/KNU_2025_summer_school_LSM.git
 > 2. Anaconda
 > 3. 편집툴 (e.g., vim, VSCODE 등)
 
+<br>
+
 `````{admonition} Windows 사용자를 위한 git & anaconda 설치 방법
 Cygwin을 통한 git 설치:
 - [Cygwin 웹사이트](https://www.cygwin.com/)에서 설치 프로그램을 다운로드
@@ -129,6 +152,7 @@ anaconda 설치:
 
 `````
 
+<br>
 
 `````{admonition} Linux 사용자를 위한 git & anaconda 설치 방법
 git 설치:
@@ -144,6 +168,7 @@ source ~/.bashrc
 ```
 `````
 
+<br>
 
 `````{admonition} Mac 사용자를 위한 git & anaconda 설치 방법
 Brew 설치:
@@ -178,6 +203,8 @@ brew install --cask anaconda
 git clone git@github.com:junhonglee89/KNU_2025_summer_school_LSM.git
 ```
 
+<br>
+
 2. anaconda environment 설치
 ```{code-block} bash
 :linenos:
@@ -185,6 +212,8 @@ cd ./KNU_2025_summer_school_LSM
 conda env create --file environment.yml
 conda activate KNU_2025_summer_school
 ```
+
+<br>
 
 3. jupyter notebook 실행
 ```{code-block} bash
@@ -200,14 +229,6 @@ jupyter notebook
 
 ### 5. 기타 참고 사항
 
-- This book is based on a textbook {cite:p}`stensrud2007parameterization`, and technical documentations of land surface models {cite:p}`reick2021jsbach` and {cite:p}`ek1991osu`.
-
-- This book is inspired by [Climate Laboratory][climlab], a lecture in University at Albany.
-
-- This book is powered by [JupyterBook][jupyterbook], and aims to be all of the following:
-    1. **self-reproducing** *(most figures are self-generating in the notebooks)*
-    2. **interactive** *(readers can run and modify code examples)*
-    3. **living document** *(content will continue to evolve, and bug report is welcome)*
 
 ```{warning}
 본 자료는 저작자의 명시적 동의 없이 복제, 배포, 수정, 전재, 2차 저작물 제작에 사용할 수 없습니다. 단, 출처를 명확히 밝히는 경우에 한하여 교육·연구 목적의 사용은 허용됩니다.
