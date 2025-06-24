@@ -9,9 +9,13 @@ This lecture introduces the fundamentals of land surface models (LSMs), which ar
 :class: tip
 
 - Learn the basic concepts and principles of land surface modeling
-- Understand key processes like surface energy balance, abd soil moisture dynamics
-- Develop a simple "toy" land surface model to gain hands-on experience
+- Understand key processes like surface energy balance, and soil moisture dynamics
+- Develop a simple 'toy'<sup>[<a href="#footnote-1">1</a>]</sup> land surface model to gain hands-on experience
 `````
+
+<a name="footnote-1"><sup>[1]</sup></a> 'Toy model'은 매우 단순화된 모델로, 복잡도를 낮추어 개념 설명/이해 및 이상 실험에 쓰인다.
+
+<br>
 
 The lecture combines theoretical foundations with practical coding exercises using Python. By the end, you'll have both conceptual understanding and practical skills in land surface modeling.
 
@@ -88,21 +92,6 @@ The lecture combines theoretical foundations with practical coding exercises usi
 ##### 추천 선행 지식 
 - 전반적인 대기과학 기본 지식
 - Python에 대한 기본 지식
-
-<br>
-<br>
-<br>
-<hr>
-
-### 3. 강의 목표
-`````{admonition} 강의 목표:
-:class: tip
-
-1. 지면 모수화 (land surface model, LSM)에 대하여 이해한다.
-2. 'Toy'<sup>[<a href="#footnote-1">1</a>]</sup> land surface model을 만들 수 있다.
-`````
-
-<a name="footnote-1"><sup>[1]</sup></a> 'Toy model'은 매우 단순화된 모델로, 복잡도를 낮추어 개념 설명/이해 및 이상 실험에 쓰인다.
 
 <br>
 <br>
