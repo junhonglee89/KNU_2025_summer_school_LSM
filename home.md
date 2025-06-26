@@ -98,7 +98,7 @@ The lecture combines theoretical foundations with practical coding exercises usi
 <br>
 <hr>
 
-### 4. 강의 수강
+### 3. 강의 수강
 
 ##### 강의 자료 받기
 1. [이곳][git_page]에서 오른쪽 상단의 다운로드 버튼을 누르면 pdf를 받을 수 있습니다(Fig. 1).
@@ -218,7 +218,7 @@ jupyter notebook
 <br>
 <hr>
 
-### 5. 기타 참고 사항
+### 4. 기타 참고 사항
 
 
 ```{warning}
