@@ -82,7 +82,7 @@ where $C_{soil}$ is the area-specific heat capacity of the uppermost soil layer 
 
 - The land surface:
   1) **gains** energy through $SW_d$ and $LW_d$ from the atmosphere.
-  1) **looses** energy through $H$, $\lambda E$, $G$ and $\epsilon \sigma T_s^4$ to the atmosphere.
+  1) **looses** energy through $H$, $\lambda E$ and $\epsilon \sigma T_s^4$ to the atmosphere.
 
 <mark>**$\therefore$ The atmosphere acts as a upper boundary condition.**</mark>
 
@@ -122,7 +122,7 @@ where $C_{soil}$ is the area-specific heat capacity of the uppermost soil layer 
 
 **Atmosphere perspective**
 
-- Water in the atmosphere is balanced betwee **1) gain from the land** and **2) loss to the land and ocean**
+- Water in the atmosphere is balanced betwee **1) gain from the land and ocean** and **2) loss to the land and ocean**
 1) **looses** water through precipitation to land and ocean.
 1) **gain** water through evapotranspiration from the land and ocean.
 
