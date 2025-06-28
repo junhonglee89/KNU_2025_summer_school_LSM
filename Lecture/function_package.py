@@ -156,11 +156,11 @@ def calculate_bulk_richardson_number(Ts, Ta, Pa, wind_speed, zr):
     theta_s_conversion = ( P_1000mb / P_SFC) ** R_OVER_C_P
     theta_s = Ts * theta_s_conversion
     
-    dtheta_over_dz = theta_a - theta_s 
+    dtheta = theta_a - theta_s 
 
     g_over_theta_a = G / theta_a
     
-    Rib = g_over_theta_a * zr * dtheta_over_dz / (wind_speed**2)
+    Rib = g_over_theta_a * zr * dtheta / (wind_speed**2)
 
     return Rib
 
